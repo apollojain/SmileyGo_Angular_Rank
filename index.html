@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SmileyGo Corporate Rankings</title>
+	<link type="text/css" media="screen" rel="stylesheet" href="table_stuff/responsive-tables.css" />
+	<link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+	<link href='style.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<div id="my_parent" ng-app="" ng-controller="namesController"> 
+
+<div id="search"> 
+	<center>
+		<h1>Corporate Rankings</h1>
+		<h4 style="display:inline">Search:</h4> <input ng-model="query">
+
+	</center>
+</div>
+
+<table class="responsive">
+<tr>
+	<td><b>Rank</b></td>
+	<td><b>Name</b></td>
+	<td><b>Revenue (in millions)</b></td>
+	<td><b>Social Spending (in millions)</b></td>
+	<td><b>Score</b></td>
+</tr>
+<tr ng-repeat="x in names | orderBy:orderProp | filter:query ">
+  <td>
+  	{{$index + 1}}
+  </td>
+  <td>
+  	<img src="{{x.url}}" style="width: 64px; height: 64px;"/>
+    {{ x.name }}
+  </td>
+  <td>
+  	{{x.revenue}}
+  </td>
+  <td >
+  	{{x.social_spending}}
+  </td>
+  <td >
+  	{{x.score}}
+  </td>
+</tr>
+</table>
+
+</div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+<script type="text/javascript" src="table_stuff/responsive-tables.js"></script>
+
+<script src="namesController.js"></script>
+
+
+</body>
+</html>

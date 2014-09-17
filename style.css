@@ -1,0 +1,46 @@
+	h1, h4{
+		font-family: 'Roboto', sans-serif;
+	}
+	body{
+		background-image: url('wall_st2.jpg');
+		background-repeat: no-repeat;
+	}
+	#search{
+		width: 800px;
+		/*margin-top:20px;
+		margin-bottom:20px;
+		margin-left: 0 auto;
+		margin-right: 0 auto;*/
+		margin-top: 20px;
+		margin-bottom: 20px;
+		margin-left: auto ;
+  		margin-right: auto ;
+		padding-left: 10px;
+		padding-bottom: 10px;
+		background-color: #f1f1f1;
+		border: 1px solid grey;
+	  	border-collapse: collapse;
+	}
+	table, th , td  {
+		/*width: 800px;*/
+      margin-left: auto ;
+  	  margin-right: auto ;
+      margin-bottom: 20px;
+	  font-family: 'Roboto', sans-serif;
+	  /*margin: 20px;*/
+	  /*border: 1px solid grey;*/
+	  /*border-collapse: collapse;*/
+	  padding: 5px;
+	}
+	table tr:nth-child(odd)	{
+	  background-color: #f1f1f1;
+	}
+	table tr:nth-child(even) {
+	  background-color: #ffffff;
+	}
+	#my_parent {
+	   min-width:800px;   /*minimum width for non-ie browsers, ignored by ie*/
+	   width: 100% !important; /*width will autoexpand as necassary in non-ie browsers*/
+	   width: 800px;  /*ie uses width as a min-width by default.*/  
+	   /*Also IE ignores !important and instead uses the last directive found*/
+	}
